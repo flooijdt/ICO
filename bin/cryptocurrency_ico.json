@@ -1,0 +1,1653 @@
+{
+    "contractName": "cryptocurrency_ico",
+    "abi": [
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "investor",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "usd_invested",
+                    "type": "uint256"
+                }
+            ],
+            "name": "buy_cryptocurrency",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "investor",
+                    "type": "address"
+                }
+            ],
+            "name": "equity_in_cryptocurrency",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "investor",
+                    "type": "address"
+                }
+            ],
+            "name": "equity_in_usd",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "max_cryptocurrency",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "investor",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "cryptocurrency_sold",
+                    "type": "uint256"
+                }
+            ],
+            "name": "sell_cryptocurrency",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "total_cryptocurrency_bougth",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "usd_to_cryptocurrency",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"investor\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"usd_invested\",\"type\":\"uint256\"}],\"name\":\"buy_cryptocurrency\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"investor\",\"type\":\"address\"}],\"name\":\"equity_in_cryptocurrency\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"investor\",\"type\":\"address\"}],\"name\":\"equity_in_usd\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"max_cryptocurrency\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"investor\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"cryptocurrency_sold\",\"type\":\"uint256\"}],\"name\":\"sell_cryptocurrency\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"total_cryptocurrency_bougth\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"usd_to_cryptocurrency\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/flooijdt/bin/Code/BlockchainA_Z/SmartContract/cryptocurrency_ico.sol\":\"cryptocurrency_ico\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/flooijdt/bin/Code/BlockchainA_Z/SmartContract/cryptocurrency_ico.sol\":{\"keccak256\":\"0xea521faf98041a5b902ace7f38a39ae73ba35f9614a4428f8800f7b4d21f7bbb\",\"urls\":[\"bzz-raw://c03d20baa2ed243209e0797e57b3d3171e16402ee894b4bc72f0aef5dfefcb0c\",\"dweb:/ipfs/QmeZHu2XLpCg3ujBq5N8YWBLC3XBQ6p3K8wtkBNCTXoMQF\"]}},\"version\":1}",
+    "bytecode": "6080604052620f42406000556103e8600155600060025534801561002257600080fd5b506103a2806100326000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c8063b123cda21161005b578063b123cda2146100db578063b733b94c146100ee578063c11a52f6146100f7578063d34b35ad1461010057600080fd5b8063108ad8d41461008257806310c51c1b1461009d57806370e22341146100c6575b600080fd5b61008b60025481565b60405190815260200160405180910390f35b61008b6100ab36600461029a565b6001600160a01b031660009081526004602052604090205490565b6100d96100d43660046102bc565b610129565b005b6100d96100e93660046102bc565b6101b3565b61008b60005481565b61008b60015481565b61008b61010e36600461029a565b6001600160a01b031660009081526003602052604090205490565b6001600160a01b038216600090815260036020526040812080548392906101519084906102fc565b90915550506001600160a01b03821660009081526003602052604090205461017c906103e890610313565b6001600160a01b038316600090815260046020526040812091909155600280548392906101aa9084906102fc565b90915550505050565b80600054600254600154836101c89190610335565b6101d29190610354565b11156101dd57600080fd5b6000600154836101ed9190610335565b6001600160a01b03851660009081526003602052604081208054929350839290919061021a908490610354565b90915550506001600160a01b038416600090815260036020526040902054610245906103e890610313565b6001600160a01b03851660009081526004602052604081209190915560028054839290610273908490610354565b909155505050505050565b80356001600160a01b038116811461029557600080fd5b919050565b6000602082840312156102ac57600080fd5b6102b58261027e565b9392505050565b600080604083850312156102cf57600080fd5b6102d88361027e565b946020939093013593505050565b634e487b7160e01b600052601160045260246000fd5b60008282101561030e5761030e6102e6565b500390565b60008261033057634e487b7160e01b600052601260045260246000fd5b500490565b600081600019048311821515161561034f5761034f6102e6565b500290565b60008219821115610367576103676102e6565b50019056fea2646970667358221220d64d0c05f448ef1d5f073fd51122dd5c62ce9232cc0ae94a501377e1addba18164736f6c634300080d0033",
+    "deployedBytecode": "608060405234801561001057600080fd5b506004361061007d5760003560e01c8063b123cda21161005b578063b123cda2146100db578063b733b94c146100ee578063c11a52f6146100f7578063d34b35ad1461010057600080fd5b8063108ad8d41461008257806310c51c1b1461009d57806370e22341146100c6575b600080fd5b61008b60025481565b60405190815260200160405180910390f35b61008b6100ab36600461029a565b6001600160a01b031660009081526004602052604090205490565b6100d96100d43660046102bc565b610129565b005b6100d96100e93660046102bc565b6101b3565b61008b60005481565b61008b60015481565b61008b61010e36600461029a565b6001600160a01b031660009081526003602052604090205490565b6001600160a01b038216600090815260036020526040812080548392906101519084906102fc565b90915550506001600160a01b03821660009081526003602052604090205461017c906103e890610313565b6001600160a01b038316600090815260046020526040812091909155600280548392906101aa9084906102fc565b90915550505050565b80600054600254600154836101c89190610335565b6101d29190610354565b11156101dd57600080fd5b6000600154836101ed9190610335565b6001600160a01b03851660009081526003602052604081208054929350839290919061021a908490610354565b90915550506001600160a01b038416600090815260036020526040902054610245906103e890610313565b6001600160a01b03851660009081526004602052604081209190915560028054839290610273908490610354565b909155505050505050565b80356001600160a01b038116811461029557600080fd5b919050565b6000602082840312156102ac57600080fd5b6102b58261027e565b9392505050565b600080604083850312156102cf57600080fd5b6102d88361027e565b946020939093013593505050565b634e487b7160e01b600052601160045260246000fd5b60008282101561030e5761030e6102e6565b500390565b60008261033057634e487b7160e01b600052601260045260246000fd5b500490565b600081600019048311821515161561034f5761034f6102e6565b500290565b60008219821115610367576103676102e6565b50019056fea2646970667358221220d64d0c05f448ef1d5f073fd51122dd5c62ce9232cc0ae94a501377e1addba18164736f6c634300080d0033",
+    "sourceMap": "73:2044:0:-:0;;;206:7;170:43;;320:4;281:43;;469:1;424:46;;73:2044;;;;;;;;;;;;;;;;",
+    "deployedSourceMap": "73:2044:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;424:46;;;;;;;;;160:25:1;;;148:2;133:18;424:46:0;;;;;;;1215:112;;;;;;:::i;:::-;-1:-1:-1;;;;;1300:20:0;1274:7;1300:20;;;:10;:20;;;;;;;1215:112;1816:299;;;;;;:::i;:::-;;:::i;:::-;;1362:418;;;;;;:::i;:::-;;:::i;170:43::-;;;;;;281;;;;;;1011:154;;;;;;:::i;:::-;-1:-1:-1;;;;;1127:31:0;1097:7;1127:31;;;:21;:31;;;;;;;1011:154;1816:299;-1:-1:-1;;;;;1923:31:0;;;;;;:21;:31;;;;;:54;;1958:19;;1923:31;:54;;1958:19;;1923:54;:::i;:::-;;;;-1:-1:-1;;;;;;;2010:31:0;;;;;;:21;:31;;;;;;:38;;2044:4;;2010:38;:::i;:::-;-1:-1:-1;;;;;1987:20:0;;;;;;:10;:20;;;;;:61;;;;2058:27;:50;;2089:19;;1987:20;2058:50;;2089:19;;2058:50;:::i;:::-;;;;-1:-1:-1;;;;1816:299:0:o;1362:418::-;1478:12;915:18;;868:27;;828:21;;797:12;:52;;;;:::i;:::-;:98;;;;:::i;:::-;:136;;776:167;;;;;;1506:29:::1;1553:21;;1538:12;:36;;;;:::i;:::-;-1:-1:-1::0;;;;;1584:31:0;::::1;;::::0;;;:21:::1;:31;::::0;;;;:56;;1506:68;;-1:-1:-1;1506:68:0;;1584:31;;;:56:::1;::::0;1506:68;;1584:56:::1;:::i;:::-;::::0;;;-1:-1:-1;;;;;;;1673:31:0;::::1;;::::0;;;:21:::1;:31;::::0;;;;;:38:::1;::::0;1707:4:::1;::::0;1673:38:::1;:::i;:::-;-1:-1:-1::0;;;;;1650:20:0;::::1;;::::0;;;:10:::1;:20;::::0;;;;:61;;;;1721:27:::1;:52:::0;;1752:21;;1650:20;1721:52:::1;::::0;1752:21;;1721:52:::1;:::i;:::-;::::0;;;-1:-1:-1;;;;;;1362:418:0:o;196:173:1:-;264:20;;-1:-1:-1;;;;;313:31:1;;303:42;;293:70;;359:1;356;349:12;293:70;196:173;;;:::o;374:186::-;433:6;486:2;474:9;465:7;461:23;457:32;454:52;;;502:1;499;492:12;454:52;525:29;544:9;525:29;:::i;:::-;515:39;374:186;-1:-1:-1;;;374:186:1:o;565:254::-;633:6;641;694:2;682:9;673:7;669:23;665:32;662:52;;;710:1;707;700:12;662:52;733:29;752:9;733:29;:::i;:::-;723:39;809:2;794:18;;;;781:32;;-1:-1:-1;;;565:254:1:o;824:127::-;885:10;880:3;876:20;873:1;866:31;916:4;913:1;906:15;940:4;937:1;930:15;956:125;996:4;1024:1;1021;1018:8;1015:34;;;1029:18;;:::i;:::-;-1:-1:-1;1066:9:1;;956:125::o;1086:217::-;1126:1;1152;1142:132;;1196:10;1191:3;1187:20;1184:1;1177:31;1231:4;1228:1;1221:15;1259:4;1256:1;1249:15;1142:132;-1:-1:-1;1288:9:1;;1086:217::o;1308:168::-;1348:7;1414:1;1410;1406:6;1402:14;1399:1;1396:21;1391:1;1384:9;1377:17;1373:45;1370:71;;;1421:18;;:::i;:::-;-1:-1:-1;1461:9:1;;1308:168::o;1481:128::-;1521:3;1552:1;1548:6;1545:1;1542:13;1539:39;;;1558:18;;:::i;:::-;-1:-1:-1;1594:9:1;;1481:128::o",
+    "sourcePath": "/home/flooijdt/bin/Code/BlockchainA_Z/SmartContract/cryptocurrency_ico.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.8.13+commit.abaa5c0e"
+    },
+    "ast": {
+        "absolutePath": "/home/flooijdt/bin/Code/BlockchainA_Z/SmartContract/cryptocurrency_ico.sol",
+        "exportedSymbols": {
+            "cryptocurrency_ico": [
+                124
+            ]
+        },
+        "id": 125,
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 1,
+                "literals": [
+                    "solidity",
+                    "^",
+                    "0.8",
+                    ".7"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "48:23:0"
+            },
+            {
+                "abstract": false,
+                "baseContracts": [],
+                "canonicalName": "cryptocurrency_ico",
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "fullyImplemented": true,
+                "id": 124,
+                "linearizedBaseContracts": [
+                    124
+                ],
+                "name": "cryptocurrency_ico",
+                "nameLocation": "82:18:0",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "constant": false,
+                        "functionSelector": "b733b94c",
+                        "id": 4,
+                        "mutability": "mutable",
+                        "name": "max_cryptocurrency",
+                        "nameLocation": "185:18:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 124,
+                        "src": "170:43:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                        },
+                        "typeName": {
+                            "id": 2,
+                            "name": "uint256",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "170:7:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                            }
+                        },
+                        "value": {
+                            "hexValue": "31303030303030",
+                            "id": 3,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "206:7:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_rational_1000000_by_1",
+                                "typeString": "int_const 1000000"
+                            },
+                            "value": "1000000"
+                        },
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": false,
+                        "functionSelector": "c11a52f6",
+                        "id": 7,
+                        "mutability": "mutable",
+                        "name": "usd_to_cryptocurrency",
+                        "nameLocation": "296:21:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 124,
+                        "src": "281:43:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                        },
+                        "typeName": {
+                            "id": 5,
+                            "name": "uint256",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "281:7:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                            }
+                        },
+                        "value": {
+                            "hexValue": "31303030",
+                            "id": 6,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "320:4:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_rational_1000_by_1",
+                                "typeString": "int_const 1000"
+                            },
+                            "value": "1000"
+                        },
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": false,
+                        "functionSelector": "108ad8d4",
+                        "id": 10,
+                        "mutability": "mutable",
+                        "name": "total_cryptocurrency_bougth",
+                        "nameLocation": "439:27:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 124,
+                        "src": "424:46:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                        },
+                        "typeName": {
+                            "id": 8,
+                            "name": "uint256",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "424:7:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                            }
+                        },
+                        "value": {
+                            "hexValue": "30",
+                            "id": 9,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "469:1:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                            },
+                            "value": "0"
+                        },
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": false,
+                        "id": 14,
+                        "mutability": "mutable",
+                        "name": "equity_cryptocurrency",
+                        "nameLocation": "586:21:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 124,
+                        "src": "558:49:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                            "typeString": "mapping(address => uint256)"
+                        },
+                        "typeName": {
+                            "id": 13,
+                            "keyType": {
+                                "id": 11,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "566:7:0",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                }
+                            },
+                            "nodeType": "Mapping",
+                            "src": "558:27:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                                "typeString": "mapping(address => uint256)"
+                            },
+                            "valueType": {
+                                "id": 12,
+                                "name": "uint256",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "577:7:0",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                }
+                            }
+                        },
+                        "visibility": "internal"
+                    },
+                    {
+                        "constant": false,
+                        "id": 18,
+                        "mutability": "mutable",
+                        "name": "equity_usd",
+                        "nameLocation": "641:10:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 124,
+                        "src": "613:38:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                            "typeString": "mapping(address => uint256)"
+                        },
+                        "typeName": {
+                            "id": 17,
+                            "keyType": {
+                                "id": 15,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "621:7:0",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                }
+                            },
+                            "nodeType": "Mapping",
+                            "src": "613:27:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                                "typeString": "mapping(address => uint256)"
+                            },
+                            "valueType": {
+                                "id": 16,
+                                "name": "uint256",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "632:7:0",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                }
+                            }
+                        },
+                        "visibility": "internal"
+                    },
+                    {
+                        "body": {
+                            "id": 33,
+                            "nodeType": "Block",
+                            "src": "766:195:0",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "commonType": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                },
+                                                "id": 29,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "leftExpression": {
+                                                    "commonType": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    },
+                                                    "id": 27,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "leftExpression": {
+                                                        "commonType": {
+                                                            "typeIdentifier": "t_uint256",
+                                                            "typeString": "uint256"
+                                                        },
+                                                        "id": 25,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": false,
+                                                        "lValueRequested": false,
+                                                        "leftExpression": {
+                                                            "id": 23,
+                                                            "name": "usd_invested",
+                                                            "nodeType": "Identifier",
+                                                            "overloadedDeclarations": [],
+                                                            "referencedDeclaration": 20,
+                                                            "src": "797:12:0",
+                                                            "typeDescriptions": {
+                                                                "typeIdentifier": "t_uint256",
+                                                                "typeString": "uint256"
+                                                            }
+                                                        },
+                                                        "nodeType": "BinaryOperation",
+                                                        "operator": "*",
+                                                        "rightExpression": {
+                                                            "id": 24,
+                                                            "name": "usd_to_cryptocurrency",
+                                                            "nodeType": "Identifier",
+                                                            "overloadedDeclarations": [],
+                                                            "referencedDeclaration": 7,
+                                                            "src": "828:21:0",
+                                                            "typeDescriptions": {
+                                                                "typeIdentifier": "t_uint256",
+                                                                "typeString": "uint256"
+                                                            }
+                                                        },
+                                                        "src": "797:52:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_uint256",
+                                                            "typeString": "uint256"
+                                                        }
+                                                    },
+                                                    "nodeType": "BinaryOperation",
+                                                    "operator": "+",
+                                                    "rightExpression": {
+                                                        "id": 26,
+                                                        "name": "total_cryptocurrency_bougth",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 10,
+                                                        "src": "868:27:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_uint256",
+                                                            "typeString": "uint256"
+                                                        }
+                                                    },
+                                                    "src": "797:98:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "nodeType": "BinaryOperation",
+                                                "operator": "<=",
+                                                "rightExpression": {
+                                                    "id": 28,
+                                                    "name": "max_cryptocurrency",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 4,
+                                                    "src": "915:18:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "src": "797:136:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            ],
+                                            "id": 22,
+                                            "name": "require",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [
+                                                4294967278,
+                                                4294967278
+                                            ],
+                                            "referencedDeclaration": 4294967278,
+                                            "src": "776:7:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                                                "typeString": "function (bool) pure"
+                                            }
+                                        },
+                                        "id": 30,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "776:167:0",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 31,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "776:167:0"
+                                },
+                                {
+                                    "id": 32,
+                                    "nodeType": "PlaceholderStatement",
+                                    "src": "953:1:0"
+                                }
+                            ]
+                        },
+                        "id": 34,
+                        "name": "can_buy_criptocurrency",
+                        "nameLocation": "721:22:0",
+                        "nodeType": "ModifierDefinition",
+                        "parameters": {
+                            "id": 21,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 20,
+                                    "mutability": "mutable",
+                                    "name": "usd_invested",
+                                    "nameLocation": "752:12:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 34,
+                                    "src": "744:20:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 19,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "744:7:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "743:22:0"
+                        },
+                        "src": "712:249:0",
+                        "virtual": false,
+                        "visibility": "internal"
+                    },
+                    {
+                        "body": {
+                            "id": 45,
+                            "nodeType": "Block",
+                            "src": "1110:55:0",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "baseExpression": {
+                                            "id": 41,
+                                            "name": "equity_cryptocurrency",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 14,
+                                            "src": "1127:21:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                                                "typeString": "mapping(address => uint256)"
+                                            }
+                                        },
+                                        "id": 43,
+                                        "indexExpression": {
+                                            "id": 42,
+                                            "name": "investor",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 36,
+                                            "src": "1149:8:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address",
+                                                "typeString": "address"
+                                            }
+                                        },
+                                        "isConstant": false,
+                                        "isLValue": true,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "nodeType": "IndexAccess",
+                                        "src": "1127:31:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "functionReturnParameters": 40,
+                                    "id": 44,
+                                    "nodeType": "Return",
+                                    "src": "1120:38:0"
+                                }
+                            ]
+                        },
+                        "functionSelector": "d34b35ad",
+                        "id": 46,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "equity_in_cryptocurrency",
+                        "nameLocation": "1020:24:0",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 37,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 36,
+                                    "mutability": "mutable",
+                                    "name": "investor",
+                                    "nameLocation": "1053:8:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 46,
+                                    "src": "1045:16:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_address",
+                                        "typeString": "address"
+                                    },
+                                    "typeName": {
+                                        "id": 35,
+                                        "name": "address",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1045:7:0",
+                                        "stateMutability": "nonpayable",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_address",
+                                            "typeString": "address"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1044:18:0"
+                        },
+                        "returnParameters": {
+                            "id": 40,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 39,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nameLocation": "-1:-1:-1",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 46,
+                                    "src": "1097:7:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 38,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1097:7:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1096:9:0"
+                        },
+                        "scope": 124,
+                        "src": "1011:154:0",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": {
+                            "id": 57,
+                            "nodeType": "Block",
+                            "src": "1283:44:0",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "baseExpression": {
+                                            "id": 53,
+                                            "name": "equity_usd",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 18,
+                                            "src": "1300:10:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                                                "typeString": "mapping(address => uint256)"
+                                            }
+                                        },
+                                        "id": 55,
+                                        "indexExpression": {
+                                            "id": 54,
+                                            "name": "investor",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 48,
+                                            "src": "1311:8:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address",
+                                                "typeString": "address"
+                                            }
+                                        },
+                                        "isConstant": false,
+                                        "isLValue": true,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "nodeType": "IndexAccess",
+                                        "src": "1300:20:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "functionReturnParameters": 52,
+                                    "id": 56,
+                                    "nodeType": "Return",
+                                    "src": "1293:27:0"
+                                }
+                            ]
+                        },
+                        "functionSelector": "10c51c1b",
+                        "id": 58,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "equity_in_usd",
+                        "nameLocation": "1224:13:0",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 49,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 48,
+                                    "mutability": "mutable",
+                                    "name": "investor",
+                                    "nameLocation": "1246:8:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 58,
+                                    "src": "1238:16:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_address",
+                                        "typeString": "address"
+                                    },
+                                    "typeName": {
+                                        "id": 47,
+                                        "name": "address",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1238:7:0",
+                                        "stateMutability": "nonpayable",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_address",
+                                            "typeString": "address"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1237:18:0"
+                        },
+                        "returnParameters": {
+                            "id": 52,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 51,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nameLocation": "-1:-1:-1",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 58,
+                                    "src": "1274:7:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 50,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1274:7:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1273:9:0"
+                        },
+                        "scope": 124,
+                        "src": "1215:112:0",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": {
+                            "id": 94,
+                            "nodeType": "Block",
+                            "src": "1496:284:0",
+                            "statements": [
+                                {
+                                    "assignments": [
+                                        69
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 69,
+                                            "mutability": "mutable",
+                                            "name": "cryptocurrency_bought",
+                                            "nameLocation": "1514:21:0",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 94,
+                                            "src": "1506:29:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 68,
+                                                "name": "uint256",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "1506:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 73,
+                                    "initialValue": {
+                                        "commonType": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        },
+                                        "id": 72,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftExpression": {
+                                            "id": 70,
+                                            "name": "usd_invested",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 62,
+                                            "src": "1538:12:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "nodeType": "BinaryOperation",
+                                        "operator": "*",
+                                        "rightExpression": {
+                                            "id": 71,
+                                            "name": "usd_to_cryptocurrency",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 7,
+                                            "src": "1553:21:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "src": "1538:36:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "1506:68:0"
+                                },
+                                {
+                                    "expression": {
+                                        "id": 78,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "baseExpression": {
+                                                "id": 74,
+                                                "name": "equity_cryptocurrency",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 14,
+                                                "src": "1584:21:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                                                    "typeString": "mapping(address => uint256)"
+                                                }
+                                            },
+                                            "id": 76,
+                                            "indexExpression": {
+                                                "id": 75,
+                                                "name": "investor",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 60,
+                                                "src": "1606:8:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": true,
+                                            "nodeType": "IndexAccess",
+                                            "src": "1584:31:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "+=",
+                                        "rightHandSide": {
+                                            "id": 77,
+                                            "name": "cryptocurrency_bought",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 69,
+                                            "src": "1619:21:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "src": "1584:56:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "id": 79,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "1584:56:0"
+                                },
+                                {
+                                    "expression": {
+                                        "id": 88,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "baseExpression": {
+                                                "id": 80,
+                                                "name": "equity_usd",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 18,
+                                                "src": "1650:10:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                                                    "typeString": "mapping(address => uint256)"
+                                                }
+                                            },
+                                            "id": 82,
+                                            "indexExpression": {
+                                                "id": 81,
+                                                "name": "investor",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 60,
+                                                "src": "1661:8:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": true,
+                                            "nodeType": "IndexAccess",
+                                            "src": "1650:20:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "=",
+                                        "rightHandSide": {
+                                            "commonType": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "id": 87,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "leftExpression": {
+                                                "baseExpression": {
+                                                    "id": 83,
+                                                    "name": "equity_cryptocurrency",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 14,
+                                                    "src": "1673:21:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                                                        "typeString": "mapping(address => uint256)"
+                                                    }
+                                                },
+                                                "id": 85,
+                                                "indexExpression": {
+                                                    "id": 84,
+                                                    "name": "investor",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 60,
+                                                    "src": "1695:8:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_address",
+                                                        "typeString": "address"
+                                                    }
+                                                },
+                                                "isConstant": false,
+                                                "isLValue": true,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "nodeType": "IndexAccess",
+                                                "src": "1673:31:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "nodeType": "BinaryOperation",
+                                            "operator": "/",
+                                            "rightExpression": {
+                                                "hexValue": "31303030",
+                                                "id": 86,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "number",
+                                                "lValueRequested": false,
+                                                "nodeType": "Literal",
+                                                "src": "1707:4:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_rational_1000_by_1",
+                                                    "typeString": "int_const 1000"
+                                                },
+                                                "value": "1000"
+                                            },
+                                            "src": "1673:38:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "src": "1650:61:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "id": 89,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "1650:61:0"
+                                },
+                                {
+                                    "expression": {
+                                        "id": 92,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "id": 90,
+                                            "name": "total_cryptocurrency_bougth",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 10,
+                                            "src": "1721:27:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "+=",
+                                        "rightHandSide": {
+                                            "id": 91,
+                                            "name": "cryptocurrency_bought",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 69,
+                                            "src": "1752:21:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "src": "1721:52:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "id": 93,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "1721:52:0"
+                                }
+                            ]
+                        },
+                        "functionSelector": "b123cda2",
+                        "id": 95,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [
+                            {
+                                "arguments": [
+                                    {
+                                        "id": 65,
+                                        "name": "usd_invested",
+                                        "nodeType": "Identifier",
+                                        "overloadedDeclarations": [],
+                                        "referencedDeclaration": 62,
+                                        "src": "1478:12:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    }
+                                ],
+                                "id": 66,
+                                "kind": "modifierInvocation",
+                                "modifierName": {
+                                    "id": 64,
+                                    "name": "can_buy_criptocurrency",
+                                    "nodeType": "IdentifierPath",
+                                    "referencedDeclaration": 34,
+                                    "src": "1455:22:0"
+                                },
+                                "nodeType": "ModifierInvocation",
+                                "src": "1455:36:0"
+                            }
+                        ],
+                        "name": "buy_cryptocurrency",
+                        "nameLocation": "1371:18:0",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 63,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 60,
+                                    "mutability": "mutable",
+                                    "name": "investor",
+                                    "nameLocation": "1398:8:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 95,
+                                    "src": "1390:16:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_address",
+                                        "typeString": "address"
+                                    },
+                                    "typeName": {
+                                        "id": 59,
+                                        "name": "address",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1390:7:0",
+                                        "stateMutability": "nonpayable",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_address",
+                                            "typeString": "address"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 62,
+                                    "mutability": "mutable",
+                                    "name": "usd_invested",
+                                    "nameLocation": "1416:12:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 95,
+                                    "src": "1408:20:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 61,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1408:7:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1389:40:0"
+                        },
+                        "returnParameters": {
+                            "id": 67,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1496:0:0"
+                        },
+                        "scope": 124,
+                        "src": "1362:418:0",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "external"
+                    },
+                    {
+                        "body": {
+                            "id": 122,
+                            "nodeType": "Block",
+                            "src": "1913:202:0",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "id": 106,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "baseExpression": {
+                                                "id": 102,
+                                                "name": "equity_cryptocurrency",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 14,
+                                                "src": "1923:21:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                                                    "typeString": "mapping(address => uint256)"
+                                                }
+                                            },
+                                            "id": 104,
+                                            "indexExpression": {
+                                                "id": 103,
+                                                "name": "investor",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 97,
+                                                "src": "1945:8:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": true,
+                                            "nodeType": "IndexAccess",
+                                            "src": "1923:31:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "-=",
+                                        "rightHandSide": {
+                                            "id": 105,
+                                            "name": "cryptocurrency_sold",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 99,
+                                            "src": "1958:19:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "src": "1923:54:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "id": 107,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "1923:54:0"
+                                },
+                                {
+                                    "expression": {
+                                        "id": 116,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "baseExpression": {
+                                                "id": 108,
+                                                "name": "equity_usd",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 18,
+                                                "src": "1987:10:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                                                    "typeString": "mapping(address => uint256)"
+                                                }
+                                            },
+                                            "id": 110,
+                                            "indexExpression": {
+                                                "id": 109,
+                                                "name": "investor",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 97,
+                                                "src": "1998:8:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": true,
+                                            "nodeType": "IndexAccess",
+                                            "src": "1987:20:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "=",
+                                        "rightHandSide": {
+                                            "commonType": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "id": 115,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "leftExpression": {
+                                                "baseExpression": {
+                                                    "id": 111,
+                                                    "name": "equity_cryptocurrency",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 14,
+                                                    "src": "2010:21:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                                                        "typeString": "mapping(address => uint256)"
+                                                    }
+                                                },
+                                                "id": 113,
+                                                "indexExpression": {
+                                                    "id": 112,
+                                                    "name": "investor",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 97,
+                                                    "src": "2032:8:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_address",
+                                                        "typeString": "address"
+                                                    }
+                                                },
+                                                "isConstant": false,
+                                                "isLValue": true,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "nodeType": "IndexAccess",
+                                                "src": "2010:31:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "nodeType": "BinaryOperation",
+                                            "operator": "/",
+                                            "rightExpression": {
+                                                "hexValue": "31303030",
+                                                "id": 114,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "number",
+                                                "lValueRequested": false,
+                                                "nodeType": "Literal",
+                                                "src": "2044:4:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_rational_1000_by_1",
+                                                    "typeString": "int_const 1000"
+                                                },
+                                                "value": "1000"
+                                            },
+                                            "src": "2010:38:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "src": "1987:61:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "id": 117,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "1987:61:0"
+                                },
+                                {
+                                    "expression": {
+                                        "id": 120,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "id": 118,
+                                            "name": "total_cryptocurrency_bougth",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 10,
+                                            "src": "2058:27:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "-=",
+                                        "rightHandSide": {
+                                            "id": 119,
+                                            "name": "cryptocurrency_sold",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 99,
+                                            "src": "2089:19:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "src": "2058:50:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "id": 121,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "2058:50:0"
+                                }
+                            ]
+                        },
+                        "functionSelector": "70e22341",
+                        "id": 123,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "sell_cryptocurrency",
+                        "nameLocation": "1825:19:0",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 100,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 97,
+                                    "mutability": "mutable",
+                                    "name": "investor",
+                                    "nameLocation": "1853:8:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 123,
+                                    "src": "1845:16:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_address",
+                                        "typeString": "address"
+                                    },
+                                    "typeName": {
+                                        "id": 96,
+                                        "name": "address",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1845:7:0",
+                                        "stateMutability": "nonpayable",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_address",
+                                            "typeString": "address"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 99,
+                                    "mutability": "mutable",
+                                    "name": "cryptocurrency_sold",
+                                    "nameLocation": "1871:19:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 123,
+                                    "src": "1863:27:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 98,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1863:7:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1844:47:0"
+                        },
+                        "returnParameters": {
+                            "id": 101,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1913:0:0"
+                        },
+                        "scope": 124,
+                        "src": "1816:299:0",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "external"
+                    }
+                ],
+                "scope": 125,
+                "src": "73:2044:0",
+                "usedErrors": []
+            }
+        ],
+        "src": "48:2070:0"
+    },
+    "functionHashes": {
+        "buy_cryptocurrency(address,uint256)": "b123cda2",
+        "equity_in_cryptocurrency(address)": "d34b35ad",
+        "equity_in_usd(address)": "10c51c1b",
+        "max_cryptocurrency()": "b733b94c",
+        "sell_cryptocurrency(address,uint256)": "70e22341",
+        "total_cryptocurrency_bougth()": "108ad8d4",
+        "usd_to_cryptocurrency()": "c11a52f6"
+    },
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "186000",
+            "executionCost": "49450",
+            "totalCost": "235450"
+        },
+        "external": {
+            "buy_cryptocurrency(address,uint256)": "infinite",
+            "equity_in_cryptocurrency(address)": "2591",
+            "equity_in_usd(address)": "2548",
+            "max_cryptocurrency()": "2305",
+            "sell_cryptocurrency(address,uint256)": "infinite",
+            "total_cryptocurrency_bougth()": "2284",
+            "usd_to_cryptocurrency()": "2327"
+        }
+    }
+}

@@ -1,7 +1,7 @@
 // my cryptocurrency ICO
 
 //version of compiler
-pragma solidity ^1.5.2;
+pragma solidity ^0.8.7;
 
 contract cryptocurrency_ico {
     // The maximum number of cryptocurrency available for sale
@@ -31,18 +31,13 @@ contract cryptocurrency_ico {
     // Getting the equity in of an investor
     function equity_in_cryptocurrency(address investor)
         external
-        constant
         returns (uint256)
     {
         return equity_cryptocurrency[investor];
     }
 
     // Getting the equity in of an investor
-    function equity_in_usd(address investor)
-        external
-        constant
-        returns (uint256)
-    {
+    function equity_in_usd(address investor) external returns (uint256) {
         return equity_usd[investor];
     }
 
